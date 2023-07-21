@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="janvdl.sales.gui.SaleController">
+   <children>
+      <TableView fx:id="table" editable="true" layoutX="12.0" layoutY="44.0" prefWidth="600.0" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="208.0" AnchorPane.topAnchor="44.0">
+        <columns>
+          <TableColumn fx:id="quantityColumn" onEditCommit="#quantityChanged" prefWidth="50.0" text="%quantity.title" />
+          <TableColumn fx:id="productColumn" editable="false" prefWidth="348.0" text="%product.title" />
+            <TableColumn fx:id="unitPriceColumn" editable="false" prefWidth="93.0" text="%unitprice.title" />
+            <TableColumn fx:id="amountColumn" editable="false" prefWidth="72.0" text="%saledetail.amount.title" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="386.0" layoutY="346.0" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="252.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <buttons>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleOk" text="%insert.button" />
+          <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCancel" text="%cancel.button" />
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="totalAmount" layoutX="148.0" layoutY="420.0" text="Label" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="148.0" />
+      <Label layoutX="55.0" layoutY="646.0" text="%total.caption" />
+      <Label layoutX="57.0" layoutY="618.0" text="Customer Name" />
+      <TextField fx:id="comment" layoutX="152.0" layoutY="386.0" promptText="Customer Name" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="152.0" />
+      <GridPane hgap="10.0" layoutX="386.0" layoutY="89.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="168.0" vgap="10.0" AnchorPane.bottomAnchor="250.0" AnchorPane.rightAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints maxWidth="95.0" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="NEVER" />
+          <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="NEVER" />
+          <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="NEVER" />
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="35.0" vgrow="NEVER" />
+            <RowConstraints fillHeight="false" maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="button10" maxHeight="-Infinity" mnemonicParsing="false" onAction="#handleQuantityButton" prefHeight="25.0" prefWidth="60.0" text="10" />
+            <Button fx:id="button15" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="15" GridPane.columnIndex="1" />
+            <Button fx:id="button7" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="7" GridPane.rowIndex="1" />
+            <Button fx:id="button8" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="button9" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="button4" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="4" GridPane.rowIndex="2" />
+            <Button fx:id="button5" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="button6" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="button1" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="1" GridPane.rowIndex="3" />
+            <Button fx:id="button2" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="button3" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="buttonMinus" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="-1" GridPane.rowIndex="4" />
+            <Button fx:id="button0" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="buttonPlus" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="+1" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#handleFree" prefWidth="60.0" text="0 €" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#handleUp" prefWidth="60.0" text="%key.up" GridPane.rowIndex="5" />
+            <Button mnemonicParsing="false" onAction="#handleDown" prefWidth="60.0" text="%key.down" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button fx:id="button20" mnemonicParsing="false" onAction="#handleQuantityButton" prefWidth="60.0" text="20" GridPane.columnIndex="2" />
+      </children>
+      </GridPane>
+      <Label layoutX="212.0" layoutY="420.0" text="%quantity.caption" AnchorPane.bottomAnchor="20.0" />
+      <Label fx:id="quantity" layoutX="294.0" layoutY="420.0" text="Label" AnchorPane.bottomAnchor="20.0" />
+      <VBox alignment="TOP_CENTER" layoutX="518.0" layoutY="229.0" prefWidth="100.0" spacing="5.0" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="60.0">
+         <children>
+            <Label text="%received.title" />
+            <TextField fx:id="receivedAmount" promptText="%received.prompt" />
+            <Label text="%return.title" />
+            <Label fx:id="returnAmount" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

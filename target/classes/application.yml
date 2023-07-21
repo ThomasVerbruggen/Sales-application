@@ -1,0 +1,54 @@
+logging:
+  level:
+    org.springframework: ERROR
+    org.hibernate: ERROR
+    janvdl: INFO
+
+format:
+  amount: "###,##0.00 \u20ac"
+  quantity: "###,##0"
+  date: d/MM/yyyy HH:mm
+
+printer:
+  ### real printer
+  name: com1
+  ### windows - file
+  # name: c:\\temp\\printer.txt
+
+
+javafx:
+  title: Mosselen
+### werkt niet en doet java -jar ... crashen op Spring Boot 2.7.0
+#javafx.css=/janvdl/sales/gui/sales.css
+
+
+spring:
+  datasource:
+    # url: jdbc:mysql://localhost:3306/sales-test
+    # url: jdbc:h2:mem:mydb
+    url: jdbc:h2:C:\\Temp\\sales-2022\\data
+    username: java
+    password: java_123
+    # driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: update
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+        web-allow-others: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      show-components: always

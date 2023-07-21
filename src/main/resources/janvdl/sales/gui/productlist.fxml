@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="janvdl.sales.gui.ProductListController">
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="%name.title" />
+          <TableColumn fx:id="descriptionColumn" prefWidth="192.0" text="%description.title" />
+            <TableColumn fx:id="priceColumn" prefWidth="98.0" text="%price.title" />
+            <TableColumn fx:id="orderColumn" prefWidth="75.0" text="%order.title" />
+            <TableColumn fx:id="activeColumn" prefWidth="86.0" text="%active.title" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <ButtonBar prefHeight="47.0" prefWidth="442.0" BorderPane.alignment="CENTER">
+        <buttons>
+            <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insert" text="%insert.text">
+               <tooltip>
+                  <Tooltip text="%insert.tooltip" />
+               </tooltip>
+            </Button>
+          <Button fx:id="updateButton" defaultButton="true" mnemonicParsing="false" onAction="#update" text="%update.text">
+               <tooltip>
+                  <Tooltip text="%update.tooltip" />
+               </tooltip>
+            </Button>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" text="%delete.text">
+               <tooltip>
+                  <Tooltip text="%delete.tooltip" />
+               </tooltip>
+            </Button>
+        </buttons>
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </ButtonBar>
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</BorderPane>
