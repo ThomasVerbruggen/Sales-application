@@ -82,6 +82,9 @@ Als het programma draait zijn er web-endpoints beschikbaar op poort 8080.
 - Met het endpoint `/h2-console` kan de database bekeken worden. (Dit kan natuurlijk ook zonder dat het programma draait
 met een algemene DBManager, b.v. DBeaver).
 
+- Bekijken/Editen van de database gaat via `http://localhost:8080/h2-console` met username `java` en password `java_123`.
+
+
 Voorbeeld
 
 ```

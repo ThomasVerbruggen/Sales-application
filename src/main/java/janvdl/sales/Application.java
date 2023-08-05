@@ -13,6 +13,7 @@ public class Application extends AbstractJavaFxApplicationSupport {
 
 	public static void main(String[] args) {
 		launch(Application.class, MainView.class, new SplashScreen(),args);
+		
 	}
 
 }
