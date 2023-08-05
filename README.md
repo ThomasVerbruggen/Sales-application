@@ -133,27 +133,41 @@ waarde in de properties file is nu `c:\temp\printer.txt`. Ieder ticketje wordt n
 Later te vervangen door `com1`.
 
 ```
-    8         29-mei-2022          21:31
+  33         05-aug-2023          13:40
 
 
-  4 MOSFR Mosselen met Frit        80,00
+  1 MF    Mosselen Friet           23,00
 
-  1 MOSFR Mosselen met Frit         0,00
+  1 MB    Mosselen Brood           23,00
 
-  1 MOSBR Mosselen met brood       20,00
+  1 MKF   Mossel Kind Friet        15,00
 
-  1 CROQ  Croque Monsieur          17,00
+  1 MKB   Mossel Kind Brood        15,00
 
-  1 CURR  Curryworst               15,00
+  1 VF    Videe Friet              15,00
 
- 10 IJS   Ijsje                    50,00
+  1 SF    Stoofvlees Friet         15,00
 
-  3 DRANK Drankkaart               45,00
+  1 CR    Croque Fanfare           10,00
 
-          Totaal                  227,00
+  1 DCR   Dubbele Croque           12,00
+
+  1 KCR   Kinder Croque             8,00
+
+  1 CF    Curryworst Friet          6,00
+
+  1 EC    Extra Curryworst          2,00
+
+  1 DK    Drankkaart               10,00
+
+          Totaal                  154,00
+
+
+    Naam: Test Customer
 
 
     Deze bon afgeven aan de helpers aub
+
 
 ```
 
