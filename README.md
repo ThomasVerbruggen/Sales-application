@@ -171,3 +171,5 @@ Later te vervangen door `com1`.
 
 ```
 
+Om sale id terug op 1 te zetten, kan je gewoon de tables droppen van sale en sale_detail. Er is nog een andere mogelijkheid, maar die is momenteel nog niet gevonden
+
